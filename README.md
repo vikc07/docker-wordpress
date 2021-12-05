@@ -1,1 +1,1 @@
-Dockerfile and run.sh for my custom Wordpress Image
+Dockerfile for my custom Wordpress Image

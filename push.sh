@@ -1,0 +1,1 @@
+docker push vikramchauhan/wordpress -a
