@@ -29,9 +29,7 @@ RUN usermod -u $RUN_UID $RUN_USER \
     && apt-get -y update \
     && apt-get -y install --no-install-recommends freetype* zlib1g-dev libpng-dev libjpeg-dev libfreetype6-dev \
     && docker-php-ext-configure gd --with-freetype=/usr/include/ --with-jpeg=/usr/include/ \
-    && docker-php-ext-install -j$(nproc) gd mysqli pdo pdo_mysql \
-    && docker-php-ext-enable gd mysqli pdo pdo_mysql \
-    && chown -R $RUN_USER:$RUN_GROUP /usr/local/etc/php/conf.d/ \
+    && docker-php-ext-install -j$(nproc) gd mysqli \
     && apt-get -y clean \
     && apt-get -y autoclean \
     && apt-get -y autoremove
